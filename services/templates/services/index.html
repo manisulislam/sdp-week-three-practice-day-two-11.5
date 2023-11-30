@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>services</title>
+{% endblock %}
+
+{% block content %}
+<div class="text-center ">
+    <h1 class="pt-5">
+        welcome to the our services page..
+    </h1>
+</div>
+
+<div class="d-flex flex-wrap gap-4 align-items-center justify-content-center mt-5">
+    {% for i in meals %}
+    <div class="card" style="width: 18rem;">
+        <img src={{i.strMealThumb}} class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{i.strMeal}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary">view details</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
